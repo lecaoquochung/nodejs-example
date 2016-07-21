@@ -1,28 +1,4 @@
 {
-  "name": "nodejs",
-  "version": "1.0.0",
-  "description": "Project learning nodejs",
-  "main": "helloworld.js",
-  "dependencies": {
-    "node-static": "^0.7.6",
-    "socket.io": "^1.3.5"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lecaoquochung/nodejs.git"
-  },
-  "keywords": [
-    "nodejs"
-  ],
-  "author": "lecaoquochung",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lecaoquochung/nodejs/issues"
-  },
-  "homepage": "https://github.com/lecaoquochung/nodejs#readme"
+  "name": "nodejs-example",
+  "version": "0.0.1"
 }
