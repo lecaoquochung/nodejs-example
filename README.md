@@ -21,3 +21,18 @@ exports.coding = function() {
 - child process
 
 ## PROJECT ARCHITECTURE
+### Nodejs application basic layers
+- Fundamental: Process the Request itself (basically difference with PHP)
+- 1st layer: Routing -> parses the request URL & decides what to do
+- 2nd layer: Static -> Place logic, send respond...
+- 3rd layer: Backend logic
+ - All base on the the URL
+ - Example of 3 basic layers in nodejs 
+
+### Task runner & building system
+
+### Test-driven development
+
+### MVC
+
+### REST API
