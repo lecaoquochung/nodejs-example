@@ -16,6 +16,8 @@ exports.coding = function() {
  - https://github.com/lecaoquochung/nodejs-example/commit/5dee2e760e010acb15afcaa7ddb3f840b65bba0c
 
 - event build-in module (manage events)
- -  
+ - https://github.com/lecaoquochung/nodejs-example/commit/6b742f8656c53f6272f32d235bcc66ad286e049f
+
+- child process
 
 ## PROJECT ARCHITECTURE
