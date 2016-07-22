@@ -19,6 +19,10 @@ exports.coding = function() {
  - https://github.com/lecaoquochung/nodejs-example/commit/6b742f8656c53f6272f32d235bcc66ad286e049f
 
 - child process
+ - exec: run command or shell
+ - spawn: parallel process
+ - https://github.com/lecaoquochung/nodejs-example/commit/9b96b4d339856067be4c6dd2af170befdf26d9b1
+ - Reference: http://www.tutorialspoint.com/nodejs/nodejs_scaling_application.htm
 
 ## PROJECT ARCHITECTURE
 ### Nodejs application basic layers
@@ -62,6 +66,13 @@ npm install grunt-contrib-watch grunt-contrib-uglify --save // update package.js
  - Continuous test -> dev new features on existing app, Automated test -> know what code breaks an old feature
  - test -> document (new members join the team)
 ![test driven flow](https://cloud.githubusercontent.com/assets/1205620/17049576/16e27760-5029-11e6-8e8f-db1156b0d271.png)
+- Mocha
+ - sample/mocha.js read external JSON files
+```
+npm install mocha -g
+mocha sample/mocha.js
+```
+![mocha test](https://cloud.githubusercontent.com/assets/1205620/17050633/f35ec054-502e-11e6-871d-907a8c970197.png)
 
 
 ### MVC
