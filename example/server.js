@@ -1,5 +1,8 @@
+// build-in module
 var http = require('http');
-var fs = require('fs');
+
+// module
+// var file = require('./file.js');
 
 http.createServer(function (req,res){
   res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -7,14 +10,12 @@ http.createServer(function (req,res){
 }).listen(9000,'127.0.0.1');
 console.log('Server is running at http://127.0.0.1:9000');
 
-// write file
-fs.writeFile('data.txt', 'Hello world!', function (err){
-  if(err) {throw err;}
-  console.log('It is saved!');
-});
+// event with book.js example
+var BookClass = require('./book.js');
+var book = new BookClass();
+book.on('rated', function() {
+  console.log('Rated with ' + book.getPoints());
+})
+book.rate(10);
 
-// read file
-fs.readFile('data.txt', function(err, data){
-  if(err) throw err;
-  console.log(data.toString());
-});
+console.log('///////////');
