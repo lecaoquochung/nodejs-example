@@ -35,6 +35,8 @@ exports.coding = function() {
 - Grunt (introduction)
 ```
 npm install -g grunt-cli
+npm install grunt-contrib-concat --save
+npm install grunt-contrib-watch grunt-contrib-uglify --save // update package.json
 ```
 
 

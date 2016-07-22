@@ -1,4 +1,21 @@
 {
   "name": "nodejs-example",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lecaoquochung/nodejs-example.git"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "author": "lecaoquochung@gmail.com",
+  "license": "MIT"
 }
