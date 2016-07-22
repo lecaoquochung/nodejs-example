@@ -13,15 +13,15 @@ exports.coding = function() {
 }
 ```
 - fs build-in module (read & write file)
- - https://github.com/lecaoquochung/nodejs-example/commit/5dee2e760e010acb15afcaa7ddb3f840b65bba0c
+ - example code https://github.com/lecaoquochung/nodejs-example/commit/5dee2e760e010acb15afcaa7ddb3f840b65bba0c
 
 - event build-in module (manage events)
- - https://github.com/lecaoquochung/nodejs-example/commit/6b742f8656c53f6272f32d235bcc66ad286e049f
+ - example code https://github.com/lecaoquochung/nodejs-example/commit/6b742f8656c53f6272f32d235bcc66ad286e049f
 
 - child process
  - exec: run command or shell
  - spawn: parallel process
- - https://github.com/lecaoquochung/nodejs-example/commit/9b96b4d339856067be4c6dd2af170befdf26d9b1
+ - example codehttps://github.com/lecaoquochung/nodejs-example/commit/9b96b4d339856067be4c6dd2af170befdf26d9b1
  - Reference: http://www.tutorialspoint.com/nodejs/nodejs_scaling_application.htm
 
 ## PROJECT ARCHITECTURE
@@ -32,7 +32,7 @@ exports.coding = function() {
 - 3rd layer: Backend logic
  - All base on the the URL
  - Example of 3 basic layers in nodejs
- - https://github.com/lecaoquochung/nodejs-example/commit/1848365e0f204f5a8f350920bedac660dfee3649
+ - example code https://github.com/lecaoquochung/nodejs-example/commit/1848365e0f204f5a8f350920bedac660dfee3649
 ![Basic layers in nodejs](https://cloud.githubusercontent.com/assets/1205620/17047855/53ca0466-501c-11e6-8a9a-402ef3279b83.png)
 
 ### Task runner & building system
@@ -44,7 +44,7 @@ npm install -g grunt-cli
 npm install grunt-contrib-concat --save
 npm install grunt-contrib-watch grunt-contrib-uglify --save // update package.json
 ```
- - https://github.com/lecaoquochung/nodejs-example/commit/52ba27a28f3a72e83944b37836d2ee0dd74e5236
+ - example code https://github.com/lecaoquochung/nodejs-example/commit/52ba27a28f3a72e83944b37836d2ee0dd74e5236
 ![Grunt sample run](https://cloud.githubusercontent.com/assets/1205620/17048836/f2852d2c-5023-11e6-9fad-426a189963b2.png)
 
 - Gulp (init & sample)
@@ -73,7 +73,7 @@ npm install mocha -g
 mocha sample/mocha.js
 ```
 ![mocha test](https://cloud.githubusercontent.com/assets/1205620/17050633/f35ec054-502e-11e6-871d-907a8c970197.png)
-
+- example code https://github.com/lecaoquochung/nodejs-example/commit/410bebab4e41e4e6bb302daddfc7fc39b85c533f
 
 ### MVC
 
