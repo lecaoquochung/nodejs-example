@@ -27,9 +27,16 @@ exports.coding = function() {
 - 2nd layer: Static -> Place logic, send respond...
 - 3rd layer: Backend logic
  - All base on the the URL
- - Example of 3 basic layers in nodejs 
+ - Example of 3 basic layers in nodejs
+ - https://github.com/lecaoquochung/nodejs-example/commit/1848365e0f204f5a8f350920bedac660dfee3649
+![Basic layers in nodejs](https://cloud.githubusercontent.com/assets/1205620/17047855/53ca0466-501c-11e6-8a9a-402ef3279b83.png)
 
 ### Task runner & building system
+- Grunt (introduction)
+```
+npm install -g grunt-cli
+```
+
 
 ### Test-driven development
 
