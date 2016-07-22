@@ -75,6 +75,21 @@ mocha sample/mocha.js
 ![mocha test](https://cloud.githubusercontent.com/assets/1205620/17050633/f35ec054-502e-11e6-871d-907a8c970197.png)
 - example code https://github.com/lecaoquochung/nodejs-example/commit/410bebab4e41e4e6bb302daddfc7fc39b85c533f
 
-### MVC
+### MVC Pattern
+- Model-View-Controller: data, logic, and presentation layers
+ - Note: VC could be the same functions
+![traditional MVC flow](https://cloud.githubusercontent.com/assets/1205620/17050789/da7a6ee8-502f-11e6-9ef2-c11251cc7334.png)
+- example code https://github.com/lecaoquochung/nodejs-example/commit/480b3c25ab3d74fd978faf4320ae87c99e2f1270
 
-### REST API
+### REST(Representational State Transfer) API Concept
+- REST API benefit: simple & highly scalable
+- Example scenario: Manage online store users
+ - GET /users -> return list of users
+ - POST /users -> create new users
+ - PUT /users/[id] -> edit the user data with user id
+ - DELETE /users/[id] -> delete user with user id
+ ```
+ # sample/server_restapi.js
+ # curl http://localhost:1337/ // GET
+ # curl -X PUT -d item="Nodejs Example" http://localhost:1337/ // PUT
+ ```
