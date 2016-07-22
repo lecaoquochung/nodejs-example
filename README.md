@@ -32,15 +32,37 @@ exports.coding = function() {
 ![Basic layers in nodejs](https://cloud.githubusercontent.com/assets/1205620/17047855/53ca0466-501c-11e6-8a9a-402ef3279b83.png)
 
 ### Task runner & building system
-- Grunt (introduction)
+- Grunt (init & sample)
+ - configuration file: gruntfile.js
+ - write to file
 ```
 npm install -g grunt-cli
 npm install grunt-contrib-concat --save
 npm install grunt-contrib-watch grunt-contrib-uglify --save // update package.json
 ```
+ - https://github.com/lecaoquochung/nodejs-example/commit/52ba27a28f3a72e83944b37836d2ee0dd74e5236
+![Grunt sample run](https://cloud.githubusercontent.com/assets/1205620/17048836/f2852d2c-5023-11e6-9fad-426a189963b2.png)
 
+- Gulp (init & sample)
+ - configuration file: gulpfile.js, plugin: gulp-concat, gulp-uglify, gulp-rename
+ - streaming-based tool (keep data in memory)
+ ```
+ npm install -g gulp
+ npm install gulp-concat gulp-uglify gulp-rename --save
+ npm install gulp-uglify --save
+ npm install gulp-rename --save
+ ```
+ ![gulp sample](https://cloud.githubusercontent.com/assets/1205620/17049360/d97c1436-5027-11e6-9970-ede61ca0f1de.png)
 
 ### Test-driven development
+- Benefit
+ - Stability application
+ - Automated testing saves time -> improving & refactoring more
+ - Better structuring & modular approachs
+ - Continuous test -> dev new features on existing app, Automated test -> know what code breaks an old feature
+ - test -> document (new members join the team)
+![test driven flow](https://cloud.githubusercontent.com/assets/1205620/17049576/16e27760-5029-11e6-8e8f-db1156b0d271.png)
+
 
 ### MVC
 
