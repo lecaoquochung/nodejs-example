@@ -1,16 +1,39 @@
 var http = require('http');
 var url = require('url');
+var qs = require('querystring');
+
+var processRequest = function(req, callback) {
+  var body = '';
+  req.on('data', function (data) {
+    body += data;
+  });
+  req.on('end', function () {
+    callback(qs.parse(body));
+  });
+};
 
 var controller = function(req, res) {
   var message = '';
-  switch(req.method) {
-    case 'GET': message = "Thats GET message"; break;
+    switch(req.method) {
+    case 'GET': message = "That's GET message"; break;
+
     case 'POST': message = "That's POST message"; break;
-    case 'PUT': message = "That's PUT message"; break;
+
+    case 'PUT':
+    processRequest(req, function(data) {
+      message = "That's PUT message. You are editing " +
+        data.item + " item.";
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.end(message + "\n");
+    });
+    return;
+    break;
+
     case 'DELETE': message = "That's DELETE message"; break;
   }
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.end(message + '\n');
-}
+};
+
 http.createServer(controller).listen(1337, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:1337/');

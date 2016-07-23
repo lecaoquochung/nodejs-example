@@ -92,4 +92,5 @@ mocha sample/mocha.js
  # sample/server_restapi.js
  # curl http://localhost:1337/ // GET
  # curl -X PUT -d item="Nodejs Example" http://localhost:1337/ // PUT
+ # curl -X PUT -d item="Udon" http://localhost:1337 // PUT with query process server_restapi_query
  ```
