@@ -1,4 +1,13 @@
 # nodejs
+
+## NAVIGATION
+### GET STARTED
+### PROJECT ARCHITECTURE
+### ASSETS
+### MVC DEVELOPING LAYERs
+### MONGODB (MANAGING USER)
+### FUNCTIONs
+
 ## GET STARTED
 ### Hello World
 - https://github.com/lecaoquochung/nodejs/commit/ade8f3963a27527a5725c386e96e005f4bbaebf8
@@ -9,7 +18,7 @@
 // code.js
 exports.project = 'Nodejs';
 exports.coding = function() {
- console.log('I am coding ' + exports.project);
+  console.log('I am coding ' + exports.project);
 }
 ```
 - fs build-in module (read & write file)
@@ -94,3 +103,41 @@ mocha sample/mocha.js
  # curl -X PUT -d item="Nodejs Example" http://localhost:1337/ // PUT
  # curl -X PUT -d item="Udon" http://localhost:1337 // PUT with query process server_restapi_query
  ```
+
+## ASSETS
+### Serving files
+- Write everything for server to handle incoming request (Not server automatically like Linux-Apache-MySQL-PHP)
+- Example of assets function (server image, css, Javascript)
+```
+// native modules
+var http = require('http');
+var fs = require('fs');
+var path = require('path');
+
+// assets module
+var files = { };
+var port = 9000;
+var host = '127.0.0.1';
+
+var assets = function(req,res){
+  // ...
+};
+
+var app = http.createServer(assets).listen(port, host);
+console.log('Listening on ' + host + ":" + port);
+
+```
+- Assets functions
+ - Check file exists (HTTP error code)
+```
+var sendError = function(message, code) {...});
+```
+ - Recognize files & its extension
+ - Sending files content to browser (Content-Type included)
+
+
+### CSS processing
+
+### Javascript Client-Side packing
+
+### HTML Template
