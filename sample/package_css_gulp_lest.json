@@ -1,0 +1,14 @@
+{
+ "name": "nodejs-example",
+ "version": "0.0.1",
+ "description": "Nodejs Example",
+ "scripts": {
+   "start": "node server.js"
+ },
+ "dependencies": {
+   "gulp": "3.8.8",
+   "gulp-less": "1.3.6",
+   "gulp-rename": "~1.2.0",
+   "gulp-minify-css": "~0.3.11"
+ }
+}

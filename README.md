@@ -134,9 +134,12 @@ var sendError = function(message, code) {...});
 ```
  - Recognize files & its extension
  - Sending files content to browser (Content-Type included)
-
+ - Ex: sample/assets_functions.js
 
 ### CSS processing
+- CSS preprocessors (Less & Sass) -> just test with Less this time
+- Package JSON: gulp, less -> sample/package_css_gulp_less.json
+- Gulp config less: sample/gulp_less_conf.js
 
 ### Javascript Client-Side packing
 
