@@ -146,7 +146,7 @@ var sendError = function(message, code) {...});
 - Goal: serving only 1 JavaScript file to the client's browser (Node.js cand do with tools)
 - Tools to do
  - Gulp (Concatenate files)
- - RequireJS (Modularity in the browser): Encapsulate client-side js into 1 file
+ - RequireJS (Modularity in the browser): Encapsulate client-side js into 1 file (?: need some examples)
 ```
 npm install -g requirejs
 
@@ -154,6 +154,27 @@ npm install -g requirejs
 r.js -o build.js
 ```
  - Browsersify (Node.js -> Browser)
+  - Sovle module problem
+```
+require(['modules/ajax', 'modules/router'], function(ajax, router) {
+ ...
+});
+
+// better with browserify
+var ajax = require('modules/ajax');
+var router = require('modules/router');
+```
+
+```
+// Install
+npm install -g browserify
+
+```
+
+```
+// defaul sample/browserify
+browserify ./main.js -o main-built.js
+```
 
 
 ### HTML Template
