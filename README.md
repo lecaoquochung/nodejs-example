@@ -176,5 +176,75 @@ npm install -g browserify
 browserify ./main.js -o main-built.js
 ```
 
-
 ### HTML Template
+- Defining templates in script tags (Reference: handlebars (http://handlebarsjs.com/) template engine.)
+```
+<script type="text/x-handlebars" id="my-template">
+ <p>Hello, <strong> </strong>!</p>
+</script>
+
+Since the tag has an id attribute, we can get its content easily in the following way:
+var template = document.querySelector('#my-template').innerHTML;
+```
+
+- Loading template external (complex)
+```
+// like jquery method
+$.get('/templates/template.html', function(html) {
+ // ...
+});
+```
+- Writing HTML inside JavaScript (Reference: React (http://facebook.github.io/react/))
+```
+<script type="text/jsx">
+  var HelloMessage = React.createClass({
+    render: function() {
+      // Note: the following line is invalid JavaScript,
+      // and only works using React parser.
+      return <div>Hello {this.props.name}</div>;
+    }
+  });
+</script>
+```
+
+```
+There are solutions that do not have templates in the form of HTML. There
+are tools that use templates written in JSON or YAML. For example, AbsurdJS
+(http://absurdjs.com/) can keep its template inside the JavaScript class
+definition as follows:
+
+body: {
+ 'section.content#home': {
+ nav: [
+ { 'a[href="#" class="link"]': 'A' },
+ { 'a[href="#" class="link"]': 'B' },
+ { 'a[href="#" class="link"]': 'C' }
+ ]
+ },
+ footer: {
+ p: 'Text in the Footer'
+ }
+}
+```
+
+- Precompiling tempaltes (fast for Backend)
+ - Do not need to think about HTML Template
+ - Separated from Javascript
+ - Do not need to fetch & process HTML
+```
+"ractive": "0.6.1",
+"gulp-tap": "0.1.3"
+```
+
+## MVC DEVELOPING LAYERs
+### Setup
+### Directory structure
+### Server handlers
+### Router
+### Ractive.js
+### Application entry point
+### Define Controller
+### Define View
+### Define Model
+
+## MONGODB (MANAGING USER)

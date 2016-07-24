@@ -6,6 +6,8 @@ var minifyCSS = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
+var Ractive = require('ractive');
+var tap = require('gulp-tap');
 
 // css
 gulp.task('css', function() {
@@ -24,11 +26,40 @@ gulp.task('watchers', function() {
 });
 
 // javascript
+// gulp.task('js', function() {
+//   gulp.src('./js/app.js')
+//   .pipe(browserify())
+//   .pipe(gulp.dest('./static/js'))
+//   .pipe(uglify())
+//   .pipe(rename({suffix: '.min'}))
+//   .pipe(gulp.dest('./static/js'))
+// });
+
 gulp.task('js', function() {
-  gulp.src('./js/app.js')
-  .pipe(browserify())
-  .pipe(gulp.dest('./static/js'))
-  .pipe(uglify())
+  gulp.src('./src/**/*.js')
+  .pipe(concat('scripts.js'))
+  .pipe(gulp.dest('./build/'))
   .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest('./static/js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('./build/'))
 });
+
+gulp.task('watchers', function() {
+  gulp.watch('src/**/*.js', ['js']);
+});
+
+// templates
+gulp.task('templates', function() {
+  gulp.src('./tpl/**/*.html')
+  .pipe(tap(function(file, t) {
+    var precompiled = Ractive.parse(file.contents.toString());
+    precompiled = JSON.stringify(precompiled);
+    file.contents = new Buffer('module.exports = ' + precompiled);
+  }))
+  .pipe(rename(function(path) {
+    path.extname = '.js';
+  }))
+  .pipe(gulp.dest('./tpl'))
+});
+
+gulp.task('default', ['css', 'templates', 'js', 'watchers']);
