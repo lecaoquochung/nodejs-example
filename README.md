@@ -140,7 +140,17 @@ var sendError = function(message, code) {...});
 - CSS preprocessors (Less & Sass) -> just test with Less this time
 - Package JSON: gulp, less -> sample/package_css_gulp_less.json
 - Gulp config less: sample/gulp_less_conf.js
+- Code https://github.com/lecaoquochung/nodejs-example/commit/d4c03eda79f20616f35328fb8cc87fb3ec835bdd
 
 ### Javascript Client-Side packing
+- Goal: serving only 1 JavaScript file to the client's browser (Node.js cand do with tools)
+- Tools to do
+ - Gulp (Concatenate files)
+ - RequireJS (Modularity in the browser): Encapsulate client-side js into 1 file
+```
+npm install -g requirejs
+```
+ - Browsersify (Node.js -> Browser)
+
 
 ### HTML Template
