@@ -149,6 +149,9 @@ var sendError = function(message, code) {...});
  - RequireJS (Modularity in the browser): Encapsulate client-side js into 1 file
 ```
 npm install -g requirejs
+
+// in code_requirejs folder
+r.js -o build.js
 ```
  - Browsersify (Node.js -> Browser)
 
