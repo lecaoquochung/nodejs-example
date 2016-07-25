@@ -308,7 +308,7 @@ window.onload = function() {
 ### Define Controller
 - path: frontend/js/controllers/Home.js
 - ?: onrender, onconstruct, onteardown, onupdate http://docs.ractivejs.org/latest/options
-- config gulp for automation ractive convert /frontend/tpl/*.html -> *.js (ractive & browserify)
+- config gulp for automation ractive convert /frontend/tpl/.html -> .js (ractive & browserify)
 
 ### Define View
 - Ractive component
@@ -316,8 +316,13 @@ window.onload = function() {
 - In this example, in the view template footer (make some data call from model like models/Version.js)
 
 ### Define Model
-- Path: /frontend/js/models 
+- Path: /frontend/js/models
 - Models share the same methods
 - Specify the URL -> Base module take care of the rest
 
 ## MONGODB (MANAGING USER)
+- Node.js works well with MongoDB (http://www.mongodb.org/).
+```
+brew install mongodb
+npm install mongodb --save
+```
