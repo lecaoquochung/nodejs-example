@@ -271,7 +271,40 @@ var app = http.createServer(assets).listen(port, '127.0.0.1');
 - Server & Client router (?: Common & non-common problem -> )
 
 ### Ractive.js
+- Developed by TheGuardian
+- DOM interaction & 2-way data binding & custom component creation.
+- Ractive.js uses mustache (http://mustache.github.io/) as a template language
+
 ### Application entry point
+```
+// frontend/js/app.js
+var Router = require('./lib/Router')();
+var Home = require('./controllers/Home');
+var currentPage;
+var body;
+
+var showPage = function(newPage) {
+  if(currentPage) { currentPage.teardown(); }
+  currentPage = newPage;
+  body.innerHTML = '';
+  currentPage.render(body);
+};
+
+window.onload = function() {
+  body = document.querySelector('body');
+  Router
+  .add('home', function() {
+    var p = new Home();
+    showPage(p);
+  })
+  .add(function() {
+    Router.navigate('home');
+  })
+  .listen()
+  .check();
+}
+```
+
 ### Define Controller
 ### Define View
 ### Define Model
