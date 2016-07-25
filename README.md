@@ -311,6 +311,13 @@ window.onload = function() {
 - config gulp for automation ractive convert /frontend/tpl/*.html -> *.js (ractive & browserify)
 
 ### Define View
+- Ractive component
+- MVC actually are just a definition & need to follow some rules with it
+- In this example, in the view template footer (make some data call from model like models/Version.js)
+
 ### Define Model
+- Path: /frontend/js/models 
+- Models share the same methods
+- Specify the URL -> Base module take care of the rest
 
 ## MONGODB (MANAGING USER)
