@@ -308,6 +308,7 @@ window.onload = function() {
 ### Define Controller
 - path: frontend/js/controllers/Home.js
 - ?: onrender, onconstruct, onteardown, onupdate http://docs.ractivejs.org/latest/options
+- config gulp for automation ractive convert /frontend/tpl/*.html -> *.js (ractive & browserify)
 
 ### Define View
 ### Define Model
