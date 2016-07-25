@@ -237,9 +237,27 @@ body: {
 ```
 
 ## MVC DEVELOPING LAYERs
-### Setup
+- File structure
+- Backend & Frontend Router
+- Rative.js(client-side framework if needed)
+- Application main file
+- MVC Classes
+
 ### Directory structure
+- nodejs-example structure
+![example MVC structure](https://cloud.githubusercontent.com/assets/1205620/17089103/e376991a-525d-11e6-87c5-19fe7099a556.png)
+- Backend folder
+ - Node.js environment
 ### Server handlers
+- Server handlers
+```
+var app = http.createServer(assets).listen(port, '127.0.0.1');
+```
+- API handler: client-side communicate with the backend via REST API
+- Page handlers: not API request -> server HTML page
+ - ractive.js: Framework for client-side
+ - frontend/app.j: client-side Javascript 
+
 ### Router
 ### Ractive.js
 ### Application entry point
