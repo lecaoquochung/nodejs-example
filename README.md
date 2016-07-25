@@ -326,3 +326,25 @@ window.onload = function() {
 brew install mongodb
 npm install mongodb --save
 ```
+
+### Update Model class
+- add update & delete method in models/Base.js
+
+### Update Page navigation & Routing
+- add tpl/navigation.html
+- {{#if}} expression & isLogged variable. (show or not show button when user login or logout)
+- on-click attribuite (interpreted by Ractive.js)
+- update Frontend/app.js navigation goto
+
+### Update Frontend & Register new user
+- add Register tempalte /tpl/register.html
+- update model/Base.js add setter metthod (?)
+- add model models/user.js
+- load UserModel on app.js (window.onload)
+
+### Update Backend API
+-
+
+### User authentication with sessions
+
+### User profile

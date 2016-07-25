@@ -9,9 +9,13 @@ var showPage = function(newPage) {
   currentPage = newPage;
   body.innerHTML = '';
   currentPage.render(body);
+  currentPage.on('navigation.goto', function(e, route) {
+    Router.navigate(route);
+  });
 };
 
 window.onload = function() {
+  userModel = new UserModel();
   body = document.querySelector('body');
   Router
   .add('home', function() {
