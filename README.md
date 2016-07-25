@@ -306,6 +306,9 @@ window.onload = function() {
 ```
 
 ### Define Controller
+- path: frontend/js/controllers/Home.js
+- ?: onrender, onconstruct, onteardown, onupdate http://docs.ractivejs.org/latest/options
+
 ### Define View
 ### Define Model
 

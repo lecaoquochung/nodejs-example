@@ -26,16 +26,7 @@ gulp.task('watchers', function() {
 });
 
 // javascript
-// gulp.task('js', function() {
-//   gulp.src('./js/app.js')
-//   .pipe(browserify())
-//   .pipe(gulp.dest('./static/js'))
-//   .pipe(uglify())
-//   .pipe(rename({suffix: '.min'}))
-//   .pipe(gulp.dest('./static/js'))
-// });
-
-gulp.task('js', function() {
+gulp.task('js', function() { 
   gulp.src('./src/**/*.js')
   .pipe(concat('scripts.js'))
   .pipe(gulp.dest('./build/'))
@@ -49,9 +40,9 @@ gulp.task('watchers', function() {
 });
 
 // templates
+// convert all /frontend/tpl/ HTML to JavaScript (Ractive.js & Browsersify serve)
 gulp.task('templates', function() {
-  gulp.src('./tpl/**/*.html')
-  .pipe(tap(function(file, t) {
+  gulp.src('./frontend/tpl/**/*.html').pipe(tap(function(file, t) {
     var precompiled = Ractive.parse(file.contents.toString());
     precompiled = JSON.stringify(precompiled);
     file.contents = new Buffer('module.exports = ' + precompiled);
@@ -59,7 +50,7 @@ gulp.task('templates', function() {
   .pipe(rename(function(path) {
     path.extname = '.js';
   }))
-  .pipe(gulp.dest('./tpl'))
+  .pipe(gulp.dest('./frontend/tpl'))
 });
 
 gulp.task('default', ['css', 'templates', 'js', 'watchers']);
