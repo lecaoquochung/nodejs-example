@@ -236,7 +236,7 @@ body: {
 "gulp-tap": "0.1.3"
 ```
 
-## MVC DEVELOPING LAYERs
+## MVC DEVELOPING LAYERs 20160725
 - File structure
 - Backend & Frontend Router
 - Rative.js(client-side framework if needed)
@@ -256,9 +256,20 @@ var app = http.createServer(assets).listen(port, '127.0.0.1');
 - API handler: client-side communicate with the backend via REST API
 - Page handlers: not API request -> server HTML page
  - ractive.js: Framework for client-side
- - frontend/app.j: client-side Javascript 
+ - frontend/app.j: client-side Javascript
 
 ### Router
+- Path frontend/lib/Router.js (Default route: skip parameter & register function match every route)
+ - Router.js check function can be used in both nodejs & client-side javascript.
+- Problem: check function (string-to-string matching -> need to support dynamic parameters like :id ...)
+```
+/home: This matches http://localhost/home
+/user/feed: This matches http://localhost/user/feed
+/user/:id/profile: This matches http://localhost/user/45/profile
+/user/:id/:action: This matches http://localhost/user/45/update
+```
+- Server & Client router (?: Common & non-common problem -> )
+
 ### Ractive.js
 ### Application entry point
 ### Define Controller
