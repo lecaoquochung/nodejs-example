@@ -380,6 +380,10 @@ req.session.user = user; // store to session
  - https://github.com/lecaoquochung/nodejs-example/commit/fe5e213db5745d7bfafefec342ee93bc22723cd5
 
 ## EXPRESS
+```
+npm install express --save // express framework
+npm install path --save // exact copy of the NodeJS ’path’ module published to the NPM registry.
+```
 ### Sending Respond
 - path: /sample/express/hello.js
 ### Static Web Server
