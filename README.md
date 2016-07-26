@@ -383,9 +383,11 @@ req.session.user = user; // store to session
 ```
 npm install express --save // express framework
 npm install path --save // exact copy of the NodeJS ’path’ module published to the NPM registry.
+npm install body-parser --save // Nodejs body parsing middleware -> take the body & parse to whatever you want
 ```
 ### Sending Respond
 - path: /sample/express/hello.js
 ### Static Web Server
-### Requests Basic
-### Requests Advance
+- path: /sample/express/express-static
+### Requests Basic Form (send, download...)
+- path: /sample/express/express-basic-form
