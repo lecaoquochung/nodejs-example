@@ -322,6 +322,7 @@ window.onload = function() {
 
 ## MONGODB (MANAGING USER)
 - Node.js works well with MongoDB (http://www.mongodb.org/).
+- init https://github.com/lecaoquochung/nodejs-example/commit/fe60d9366d20633e93ca8cfbd1c0742a5929244a
 ```
 brew install mongodb
 npm install mongodb --save
@@ -352,9 +353,28 @@ npm install sha1 --save
  - connect the first time (save to cache as object for the nex call)
 - Fetching the POST data - Request handling (common)
 - Router api/user/add method
+- https://github.com/lecaoquochung/nodejs-example/commit/8f734cd8cb18aaed0c8d60720f93ce52c2367d43
 
 
 ### User authentication with sessions
+```
+npm install cookie-session --save
+```
 - Update frontend user login (app.js, template)
+- Note
+```
+delete user._id; // remove when return
+delete user.password; // remote when return
+req.session.user = user; // store to session
+```
+- https://github.com/lecaoquochung/nodejs-example/commit/c847d0835b345b49f7b9c61b3ca722fdb91deb94
 
 ### User profile
+```
+```
+- Path: /profile
+- API & MVC for /profile
+- Frontend
+ - Route app.js
+ - Controller Profile.js
+ - Template tpl/profile.html

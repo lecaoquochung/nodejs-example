@@ -4,6 +4,7 @@ var Home = require('./controllers/Home');
 var currentPage;
 var body;
 
+// common
 var showPage = function(newPage) {
   if(currentPage) { currentPage.teardown(); }
   currentPage = newPage;
@@ -32,8 +33,17 @@ window.onload = function() {
   .check();
 }
 
+// roter
 Router
 .add('login', function() {
   var p = new Login();
   showPage(p);
+})
+.add('profile', function() {
+  if(userModel.isLogged()) {
+    var p = new Profile();
+    showPage(p);
+  } else {
+    Router.navigate('login');
+  }
 })
