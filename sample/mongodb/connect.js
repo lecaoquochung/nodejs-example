@@ -7,10 +7,10 @@ function(err, db) {
 });
 
 // db object with CRUD
-var collection = db.collection('users');
-collection.insert({
-  name: 'Hung',
-  email: 'lehung@test.com'
-}, function(err, result) {
-  // ...
-});
+  // var collection = db.collection('users');
+  // collection.insert({
+  //   name: 'Hung',
+  //   email: 'lehung@test.com'
+  // }, function(err, result) {
+  //   // ...
+  // });

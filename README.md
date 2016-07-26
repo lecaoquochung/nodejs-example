@@ -343,7 +343,16 @@ npm install mongodb --save
 - load UserModel on app.js (window.onload)
 
 ### Update Backend API
--
+```
+npm install sha1 --save
+```
+- API request add record to db
+- Connect to mongodb (common)
+ - mongodb helper: getDatabaseConnection -> connect to mongodb
+ - connect the first time (save to cache as object for the nex call)
+- Fetching the POST data - Request handling (common)
+- Router api/user/add method
+
 
 ### User authentication with sessions
 
