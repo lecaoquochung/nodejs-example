@@ -16,6 +16,9 @@ var showPage = function(newPage) {
 
 window.onload = function() {
   userModel = new UserModel();
+  userModel.fetch(function(error, result) {
+    // ... router setting
+  });
   body = document.querySelector('body');
   Router
   .add('home', function() {
@@ -28,3 +31,9 @@ window.onload = function() {
   .listen()
   .check();
 }
+
+Router
+.add('login', function() {
+  var p = new Login();
+  showPage(p);
+})

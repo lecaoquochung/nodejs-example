@@ -39,37 +39,73 @@ var validEmail = function(value) {
 };
 
 // router api/user with add method
-Router.add('api/user', function(req, res) {
+Router
+.add('api/user/login', function(req, res) {
+  processPOSTRequest(req, function(data) {
+    if(!data.email || data.email === '' || !validEmail(data.email)) {
+      error('Invalid or missing email.', res);
+    } else if(!data.password || data.password === '') {
+      error('Please enter your password.', res);
+    } else {
+      getDatabaseConnection(function(db) {
+        var collection = db.collection('users');
+        collection.find({
+          email: data.email,
+          password: sha1(data.password)
+        }).toArray(function(err, result) {
+          if(result.length === 0) {
+            error('Wrong email or password', res);
+          } else {
+            var user = result[0];
+            delete user._id; // remove when return
+            delete user.password; // remote when return
+            req.session.user = user; // store to session
+            response({
+              success: 'OK',
+              user: user
+            }, res);
+          }
+        });
+      });
+    }
+  });
+})
+.add('api/user', function(req, res) {
   switch(req.method) {
     case 'GET':
-    // ...
+      // ...
+      if(req.session && req.session.user) {
+        response(req.session.user, res);
+      } else {
+        response({}, res);
+      }
     break;
     case 'PUT':
-    // ...
+      // ...
     break;
     case 'POST':
-    processPOSTRequest(req, function(data) {
-      if(!data.firstName || data.firstName === '') {
-        error('Please fill your first name.', res);
-      } else if(!data.lastName || data.lastName === '') {
-        error('Please fill your last name.', res);
-      } else if(!data.email || data.email === '' ||
-        !validEmail(data.email)) {
-          error('Invalid or missing email.', res);
-      } else if(!data.password || data.password === '') {
-        error('Please fill your password.', res);
-      } else {
-        getDatabaseConnection(function(db) {
-          var collection = db.collection('users');
-          data.password = sha1(data.password);
-          collection.insert(data, function(err, docs) {
-            response({
-              success: 'OK'
-            }, res);
+      processPOSTRequest(req, function(data) {
+        if(!data.firstName || data.firstName === '') {
+          error('Please fill your first name.', res);
+        } else if(!data.lastName || data.lastName === '') {
+          error('Please fill your last name.', res);
+        } else if(!data.email || data.email === '' ||
+          !validEmail(data.email)) {
+            error('Invalid or missing email.', res);
+        } else if(!data.password || data.password === '') {
+          error('Please fill your password.', res);
+        } else {
+          getDatabaseConnection(function(db) {
+            var collection = db.collection('users');
+            data.password = sha1(data.password);
+            collection.insert(data, function(err, docs) {
+              response({
+                success: 'OK'
+              }, res);
+            });
           });
-        });
-      }
-    });
+        }
+      });
     break;
     case 'DELETE':
     // ...

@@ -355,5 +355,6 @@ npm install sha1 --save
 
 
 ### User authentication with sessions
+- Update frontend user login (app.js, template)
 
 ### User profile

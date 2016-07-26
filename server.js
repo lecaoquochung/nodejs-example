@@ -5,9 +5,23 @@ var http = require('http');
 // var file = require('./file.js');
 var Assets = require('./backend/Assets');
 
-// process
-http.createServer(function (req,res){
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n')
-}).listen(9000,'127.0.0.1');
-console.log('Server is running at http://127.0.0.1:9000');
+// router
+Router
+.add('static', Assets)
+.add('api', API)
+.add(Default);
+var session = require('cookie-session');
+var checkSession = function(req, res) {
+  session({
+    keys: ['nodejs-example']
+  })(req, res, function() {
+    process(req, res);
+  });
+}
+
+var process = function(req, res) {
+ Router.check(req.url, [req, res]);
+}
+
+var app = http.createServer(checkSession).listen(port,'127.0.0.1');
+console.log("Listening on 127.0.0.1:" + port);
