@@ -1,12 +1,13 @@
 # nodejs
 
 ## NAVIGATION
-### GET STARTED
-### PROJECT ARCHITECTURE
-### ASSETS
-### MVC DEVELOPING LAYERs
-### MONGODB (MANAGING USER)
-### FUNCTIONs
+- [ ] GET STARTED
+- [ ] PROJECT ARCHITECTURE
+- [ ] ASSETS
+- [ ] MVC DEVELOPING LAYERs
+- [ ] MONGODB (MANAGING USER)
+- [ ] EXAMPLE FUNCTIONs
+- [ ] EXPRESS
 
 ## GET STARTED
 ### Hello World
@@ -370,11 +371,17 @@ req.session.user = user; // store to session
 - https://github.com/lecaoquochung/nodejs-example/commit/c847d0835b345b49f7b9c61b3ca722fdb91deb94
 
 ### User profile
-```
-```
 - Path: /profile
 - API & MVC for /profile
 - Frontend
  - Route app.js
  - Controller Profile.js
  - Template tpl/profile.html
+ - https://github.com/lecaoquochung/nodejs-example/commit/fe5e213db5745d7bfafefec342ee93bc22723cd5
+
+## EXPRESS
+### Sending Respond
+- path: /sample/express/hello.js
+### Static Web Server
+### Requests Basic
+### Requests Advance
