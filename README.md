@@ -16,6 +16,7 @@
 - [ ] MOVIE SYSTEM WITH KRAKEN
 - [ ] EXAMPLE APP: INSTAGRAM LIKE
 - [ ] COUCHDB BASIC
+- [ ] REFERENCE
 
 ## GET STARTED
 ### Hello World
@@ -415,8 +416,47 @@ npm install express-session --save // simple session middleware for express
 npm install express-validator --save // Express middleware for the validator module. https://github.com/ctavan/express-validator
 npm install connect-flash --save // Flash message middleware for Connect.
 npm install mongoose --save // Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.
+
+npm install debug --save
+npm install jade --save
+npm install server-favicon --save
+npm install moment --save
+
+Node Syntax
+Handler
+app.get
+app.use: app.use() takes only one callback whereas app.all() can take multiple callbacks.
+app.set
+app.all
+
+Middleware: callback of request Handler
+
+Example
+app.use( "/product" , mymiddleware);
+// will match /product
+// will match /product/cool
+// will match /product/foo
+
+app.all( "/product" , handler);
+// will match /product
+// won't match /product/cool   <-- important
+// won't match /product/foo    <-- important
+
+app.all( "/product/*" , handler);
+// won't match /product        <-- Important
+// will match /product/cool
+// will match /product/foo
 ```
+- handler & middleware examples. Path: sample/handler/
+- Config mongodb
+```
+ mongod --directoryperdb --dbpath /Users/hungle/Sites/projects/mongodb/data/db --logpath /Users/hungle/Sites/projects/mongodb/log/mongo.log --logappend --rest // --install win
+```
+
 ### Router & View (Basic, Concept)
 ### Categories (Basic, Concept)
 ### Articles (Basic, Structure)
 ### Comments
+
+## REFERENCE
+- http://qnimate.com/express-js-middleware-tutorial/
