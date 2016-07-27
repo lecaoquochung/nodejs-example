@@ -1,13 +1,21 @@
 # nodejs
 
 ## NAVIGATION
-- [ ] GET STARTED
-- [ ] PROJECT ARCHITECTURE
-- [ ] ASSETS
-- [ ] MVC DEVELOPING LAYERs
-- [ ] MONGODB (MANAGING USER)
-- [ ] EXAMPLE FUNCTIONs
-- [ ] EXPRESS
+- [x] GET STARTED
+- [x] PROJECT ARCHITECTURE
+- [x] ASSETS
+- [x] MVC DEVELOPING LAYERs
+- [x] MONGODB (MANAGING USER)
+- [x] EXAMPLE FUNCTIONs
+- [x] EXPRESS BASIC FORM
+- [ ] EXPRESS BLOG SYSTEM
+- [ ] USER LOGIN SYSTEM
+- [ ] SOCKET.IO BASIC
+- [ ] SOCKET.IO CHAT
+- [ ] MEAN.JS BASIC
+- [ ] MOVIE SYSTEM WITH KRAKEN
+- [ ] EXAMPLE APP: INSTAGRAM LIKE
+- [ ] COUCHDB BASIC
 
 ## GET STARTED
 ### Hello World
@@ -379,7 +387,7 @@ req.session.user = user; // store to session
  - Template tpl/profile.html
  - https://github.com/lecaoquochung/nodejs-example/commit/fe5e213db5745d7bfafefec342ee93bc22723cd5
 
-## EXPRESS
+## EXPRESS BASIC FORM
 ```
 npm install express --save // express framework
 npm install path --save // exact copy of the NodeJS ’path’ module published to the NPM registry.
@@ -391,3 +399,24 @@ npm install body-parser --save // Nodejs body parsing middleware -> take the bod
 - path: /sample/express/express-static
 ### Requests Basic Form (send, download...)
 - path: /sample/express/express-basic-form
+
+## EXPRESS BLOG SYSTEM
+```
+```
+### MongoDB & Middleware
+```
+npm install express --save
+npm install path --save
+npm install serve-favicon --save
+npm install morgan --save // request logger middleware
+npm install cookie-parser --save // parse cookie to object
+npm install body-parser --save
+npm install express-session --save // simple session middleware for express
+npm install express-validator --save // Express middleware for the validator module. https://github.com/ctavan/express-validator
+npm install connect-flash --save // Flash message middleware for Connect.
+npm install mongoose --save // Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.
+```
+### Router & View (Basic, Concept)
+### Categories (Basic, Concept)
+### Articles (Basic, Structure)
+### Comments
