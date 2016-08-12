@@ -1,0 +1,8 @@
+{
+  "apps" : [{
+    "name"        : "nodejs-example",
+    "script"      : "server.js",
+    "cwd"         : "/var/www/html/nodejs/nodejs-example/"
+  }]
+}
+            

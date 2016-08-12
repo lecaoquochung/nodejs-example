@@ -17,6 +17,9 @@
 - [ ] EXAMPLE APP: INSTAGRAM LIKE
 - [ ] COUCHDB BASIC
 - [ ] REFERENCE
+- [ ] API
+- [ ] ENVIRONMENT SETUP
+- [ ] TDD
 
 ## GET STARTED
 ### Hello World
@@ -460,3 +463,20 @@ app.all( "/product/*" , handler);
 
 ## REFERENCE
 - http://qnimate.com/express-js-middleware-tutorial/
+
+## API
+```
+npm install winston --save
+```
+- app-module-path https://www.npmjs.com/package/app-module-path
+- winston system logger https://github.com/winstonjs/winston#handling-uncaught-exceptions-with-winston
+
+## ENVIRONMENT SETUP
+```
+sudo npm install -g n // node module
+sudo n 4.4.7 //install node ver 4.4.7 
+sudo npm install -g pm2 // install pm2
+```
+- Docker http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker
+
+## TDD

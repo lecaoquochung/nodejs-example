@@ -1,27 +1,24 @@
+"use strict";
+
+// path 
+require('app-module-path').addPath(__dirname);
+
 // build-in module
-var http = require('http');
-
-// module
+// var http = require('http');
 // var file = require('./file.js');
-var Assets = require('./backend/Assets');
 
-// router
-Router
-.add('static', Assets)
-.add('api', API)
-.add(Default);
-var session = require('cookie-session');
-var checkSession = function(req, res) {
-  session({
-    keys: ['nodejs-example']
-  })(req, res, function() {
-    process(req, res);
-  });
-}
+// modules
+var express = require("express");
 
-var process = function(req, res) {
- Router.check(req.url, [req, res]);
-}
+// middlewares
 
-var app = http.createServer(checkSession).listen(port,'127.0.0.1');
-console.log("Listening on 127.0.0.1:" + port);
+// model
+
+// controller
+var statusesController = require("controllers/statuses");
+
+// app
+var app = express();
+
+// routes
+app.get("/api/v2/ping", statusesController.ping);
