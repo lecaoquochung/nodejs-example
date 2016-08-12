@@ -42,7 +42,8 @@
     "ractive": "^0.7.3",
     "reactive": "^1.2.0",
     "serve-favicon": "^2.3.0",
-    "sha1": "^1.1.1"
+    "sha1": "^1.1.1",
+    "sqlite3": "^3.1.4"
   },
   "author": "lecaoquochung@gmail.com",
   "license": "MIT"
