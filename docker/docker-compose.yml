@@ -1,0 +1,52 @@
+nodejs-example:
+  dockerfile: Dockerfile
+  build: .
+  links:
+    - redis
+    - mysql
+  ports:
+    - "9999:9999"
+    - "9000:9000"
+  volumes:
+    - $PWD/..:/home/ubuntu/data/nodejs-example
+  environment:
+    - REDIS_PORT=6379
+    - REDIS_HOST=redis
+    - DEPLOY_ENV=local
+    - DB_HOST=mysql
+    - DB_NAME=nodejs
+    - DB_PORT=3306
+    - DB_USERNAME=nodejs
+    - DB_PASSWORD=lecaoquochung
+
+nginx:
+  dockerfile: nginxDockerfile
+  build: .
+  ports:
+    - "80:80"
+  links:
+    - nodejs-example
+
+redis:
+  image: redis
+  ports:
+    - "6379:6379"
+
+mysql:
+  dockerfile: docker/mysqlDockerfile
+  build: ..
+
+  # This is needed to allow the mysql volume to work, at least
+  # on OS X with docker-machine
+  # https://github.com/docker-library/mysql/issues/3
+  user: "1000:50"
+  ports:
+    - "3306:3306"
+  volumes:
+    - $PWD/mysql:/var/lib/mysql
+    - $PWD/../sql:/sqlscripts
+  environment:
+    - MYSQL_ROOT_PASSWORD=lecaoquochung
+    - MYSQL_DATABASE=nodejs
+    - MYSQL_USER=nodejs
+    - MYSQL_PASSWORD=lecaoquochung

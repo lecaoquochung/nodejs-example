@@ -479,4 +479,10 @@ sudo npm install -g pm2 // install pm2
 ```
 - Docker http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker
 
+```
+Run docker
+./docker.sh 
+
+```
+
 ## TDD
