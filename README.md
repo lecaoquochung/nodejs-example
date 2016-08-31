@@ -22,6 +22,31 @@
 - [ ] TDD
 
 ## GET STARTED
+### Install NPM (Nodejs package management) & dependencies
+- Install NPM
+```
+sudo yum install npm 
+// update to latest npm
+sudo npm install npm@latest -g
+
+sudo npm install -g n // nodejs verison stable
+sudo n 4.4.7 # install node ver 4.4.7 
+
+// update version on nodejs
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+```
+- Install Bower
+```
+npm install -g bower
+```
+
+- Install Gulp
+
+- Reference
+ - https://docs.npmjs.com/cli/version
+
 ### Hello World
 - https://github.com/lecaoquochung/nodejs/commit/ade8f3963a27527a5725c386e96e005f4bbaebf8
 
