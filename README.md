@@ -25,14 +25,15 @@
 ### Install NPM (Nodejs package management) & dependencies
 - Install NPM
 ```
-sudo yum install npm 
+sudo yum install nodejs // sudo apt-get install nodejs
+sudo yum install npm // sudo apt-get install npm
 // update to latest npm
-sudo npm install npm@latest -g
 
 sudo npm install -g n // nodejs verison stable
 sudo n 4.4.7 # install node ver 4.4.7 
 
 // update version on nodejs
+sudo npm install npm@latest -g
 sudo npm cache clean -f
 sudo npm install -g n
 sudo n stable
@@ -43,9 +44,15 @@ npm install -g bower
 ```
 
 - Install Gulp
+```
+sudo npm install -g gulp
+```
 
 - Reference
  - https://docs.npmjs.com/cli/version
+ - http://www.hostingadvice.com/how-to/install-nodejs-ubuntu-14-04/
+ - http://www.hostingadvice.com/how-to/ubuntu-show-version/
+ - http://stackoverflow.com/questions/10075990/upgrading-node-js-to-latest-version
 
 ### Hello World
 - https://github.com/lecaoquochung/nodejs/commit/ade8f3963a27527a5725c386e96e005f4bbaebf8
